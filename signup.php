@@ -20,22 +20,22 @@ if(isset($_SESSION['error'])){
         <form action="process/signup-process.php" method="POST" onsubmit = "return validateform()">
             <div class="uname">
                 <label for="username">Username</label><br>
-                <input type="text" id="uname" name="username" onchange="validateun();" >
+                <input type="text" id="uname" name="username" oninput="validateusername()" >
                 <span class="error" id="unerror"></span>
             </div>
             <div class="email">
                 <label for="email">Email</label><br>
-                <input type="text" id="email" name="email" >
+                <input type="text" id="email" name="email" oninput="validateemail()">
                 <span class="error" id="emailerror"></span>
             </div>
             <div class="password">
                 <label for="password">Password</label><br>
-                <input type="password" id="password" name="password" >
+                <input type="password" id="password" name="password" oninput="validatepassword()">
                 <span class="error" id="passworderror"></span>
             </div>
             <div class="confirmpassword">
                 <label for="confirmpass">Confirm Password</label><br>
-                <input type="password" id="confirmpass" name="confirmpass" >
+                <input type="password" id="confirmpass" name="confirmpass" oninput="validateconfirmpass()">
                 <span class="error" id="confirmpasserror"></span>
             </div>
             <button type="submit">Submit</button>
