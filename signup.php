@@ -15,34 +15,35 @@ if(isset($_SESSION['error'])){
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="hero">
     <div class="form">
-        <h1>Signup</h1>
+        <h1 class="topic">Sign up</h1>
+        <p class="topicdesc">Create your account</p>
         <form action="process/signup-process.php" method="POST" onsubmit = "return validateform()">
             <div class="uname">
-                <label for="username">Username</label><br>
-                <input type="text" id="uname" name="username" oninput="validateusername()" >
+                <input class="textinput" type="text" id="uname" name="username" placeholder="Username" oninput="validateusername()" >
                 <span class="error" id="unerror"></span>
             </div>
             <div class="email">
-                <label for="email">Email</label><br>
-                <input type="text" id="email" name="email" oninput="validateemail()">
+                <input class="textinput" type="text" id="email" name="email" placeholder="Email" oninput="validateemail()">
                 <span class="error" id="emailerror"></span>
             </div>
             <div class="password">
-                <label for="password">Password</label><br>
-                <input type="password" id="password" name="password" oninput="validatepassword()">
+                <input class="textinput" type="password" id="password" name="password" placeholder="Password" oninput="validatepassword()">
                 <span class="error" id="passworderror"></span>
             </div>
             <div class="confirmpassword">
-                <label for="confirmpass">Confirm Password</label><br>
-                <input type="password" id="confirmpass" name="confirmpass" oninput="validateconfirmpass()">
+                <input class="textinput" type="password" id="confirmpass" name="confirmpass" placeholder="Confirm Password" oninput="validateconfirmpass()">
                 <span class="error" id="confirmpasserror"></span>
             </div>
-            <button type="submit">Submit</button>
+            <div class="submit">
+                <button class="submitbutton" type="submit">Submit</button>
+            </div>
         </form>
-        <div>
+        <div class="switch">
             Already have an account? <a href="login.php">Login</a>
         </div>
+    </div>
     </div>
     <script src="script.js"></script>
     <script>

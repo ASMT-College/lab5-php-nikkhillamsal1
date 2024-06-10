@@ -12,26 +12,32 @@ if(isset($_SESSION['loginerror'])){
 ?>
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>login</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+<body>
+  <div class="hero">
     <div class="form">
-    <h1>Login</h1>
+    <h1 class="topic">Welcome Back</h1>
+    <p class="topicdesc">Enter your credential to Login</p>
       <form action="process/login-process.php" method="post">
           <div class="container">
-            <br />Username: <br />
-            <input class="textinput" type="text" name="username" required />
-            <br />Password: <br />
-            <input class="textinput" type="password" name="password" required />
-            <br />
-            <button type="submit">Submit</button>
+            <div class="un">
+              <input class="textinput" type="text" name="username" placeholder="Username" required />
+            </div>
+            <div class="password">
+              <input class="textinput" type="password" name="password" placeholder="Password" required />
+            </div>
+            <div class="submit">
+              <button class="submitbutton" type="submit">Submit</button>
+            </div>
           </div>
       </form>
     </div>
-    <div>Don't have an account? <a href="signup.php">Signup</a></div>
-  </body>
+    <div class="switch">Don't have an account? <a href="signup.php">Signup</a></div>
+    </div>
+</body>
 </html>

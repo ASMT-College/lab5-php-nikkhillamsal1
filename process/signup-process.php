@@ -42,7 +42,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         exit();
     }
     else{
-        $qry = "INSERT INTO users (username, email, password) VALUE ('$un', '$email', '$password')";
+        $encpass = password_hash($password, PASSWORD_DEFAULT);
+        $qry = "INSERT INTO users (username, email, password) VALUE ('$un', '$email', '$encpass')";
         $res = mysqli_query($conn,$qry);
         if(!$res){
             $ErrMsg = "<p style='color:red; font-size:20px;'>Cannot signup. Try again!</p>";
